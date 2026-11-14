@@ -1,0 +1,12 @@
+schema_version = "1.0.0"
+
+id = "appdimens"
+version = "3.2.0"
+name = "AppDimens"
+tagline = "Responsive sizes for add-on UI, viewport overlays and render text"
+maintainer = "Jean Bodenberg"
+type = "add-on"
+website = "https://github.com/bodenberg/appdimens-py"
+tags = ["User Interface", "Text Tools"]
+blender_version_min = "4.2.0"
+license = ["SPDX:Apache-2.0"]

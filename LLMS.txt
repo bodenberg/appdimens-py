@@ -1,0 +1,11 @@
+# appdimens (Python)
+
+> AppDimens for Python 3.7+ (CPython, PyPy) and Blender 2.80 → 4.x. Responsive sizes with the family tokens (`sdp`, `hdp`, `wdp`, `ssp`, `sem`, strategy prefixes `a p pw f i log dg pr ft fl d`, flags `a i ia`, inverters `Ph Lh Pw Lw`, `Px`). Zero dependencies. Version 3.2.0. PyPI `appdimens`.
+
+- [README](README.md): install, tokens, scopes, adapters, Blender, performance
+- [Integrations](docs/INTEGRATIONS.md): Tkinter, Qt for Python, Kivy, pygame, pyglet/arcade, wxPython, Dear PyGui, Panda3D, Blender
+- [Blender](docs/BLENDER.md): add-on, UI vs render snapshots, Fit Text to Render
+- [Skill](skills/appdimens-py/SKILL.md)
+- [Hub](https://github.com/bodenberg/appdimens) · [Theory](https://github.com/bodenberg/appdimens/blob/main/DOCS/THEORY.md)
+
+Formulas: reference 300 × 533; `sdp = v·sw/300`; auto `v·(d≤480 ? d/300 : 1.6 + 0.4·ln(1+(d−480)/300))`; `a` flag scaled `v·(1+(sw−300)(1/300 + k·ln(AR/1.78)))`, others `×(1 + k·ln(AR/1.78))`, k = 0.08/30.

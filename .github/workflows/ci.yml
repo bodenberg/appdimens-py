@@ -1,0 +1,26 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python: ["3.8", "3.11", "3.13", "pypy3.10"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "${{ matrix.python }}" }
+      - run: pip install pytest
+      - run: python -m pytest -q
+      - run: python scripts/bench.py
+      - run: python scripts/build_blender_addon.py
+  blender-real:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - run: pip install bpy pytest
+      - run: python -c "import sys; sys.path[:0]=['src','blender']; import bpy, appdimens_blender as a; a.register(); a.unregister(); print('blender', bpy.app.version_string, 'ok')"

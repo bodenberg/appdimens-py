@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "appdimens"
+version = "3.2.0"
+description = "AppDimens for Python — responsive dp/sp scaling (sdp, ssp, asdp…) with the exact family math, for Tk, Qt, Kivy, pygame, pyglet, wx, Dear PyGui, Panda3D and Blender."
+readme = "README.md"
+license = {text = "Apache-2.0"}
+authors = [{name = "Jean Bodenberg"}]
+requires-python = ">=3.7"
+keywords = ["appdimens", "responsive", "sdp", "ssp", "dp", "scaling", "blender", "tkinter", "pyside", "kivy", "pygame", "hidpi"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+  "Operating System :: OS Independent",
+  "Topic :: Software Development :: User Interfaces",
+  "Topic :: Multimedia :: Graphics :: 3D Modeling",
+  "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://github.com/bodenberg/appdimens-py"
+Hub = "https://github.com/bodenberg/appdimens"
+Issues = "https://github.com/bodenberg/appdimens-py/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+appdimens = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
