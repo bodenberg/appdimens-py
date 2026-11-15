@@ -9,3 +9,5 @@
 - [Hub](https://github.com/bodenberg/appdimens) · [Theory](https://github.com/bodenberg/appdimens/blob/main/DOCS/THEORY.md)
 
 Formulas: reference 300 × 533; `sdp = v·sw/300`; auto `v·(d≤480 ? d/300 : 1.6 + 0.4·ln(1+(d−480)/300))`; `a` flag scaled `v·(1+(sw−300)(1/300 + k·ln(AR/1.78)))`, others `×(1 + k·ln(AR/1.78))`, k = 0.08/30.
+
+Family (same tokens and math): appdimens-dynamic (Android), appdimens-sdps/ssps (XML), appdimens-kmp, appdimens-ios, appdimens-flutter, appdimens-react-native, appdimens-web, appdimens-net-binding (.NET), appdimens-qt, appdimens-gtk, appdimens-lvgl, appdimens-roku, appdimens-py, appdimens-games — https://github.com/bodenberg/appdimens · agent skills: https://github.com/bodenberg/appdimens-skills

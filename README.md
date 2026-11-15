@@ -9,7 +9,7 @@
 [![Blender](https://img.shields.io/badge/Blender-2.80%20%E2%86%92%204.x-f59e0b.svg)](docs/BLENDER.md)
 [![License](https://img.shields.io/badge/license-Apache%202.0-15803d.svg)](LICENSE)
 
-Part of the [AppDimens family](https://github.com/bodenberg/appdimens) — same token names and the same math as Android, iOS, Flutter, React Native, Web, .NET, GTK, Qt, LVGL and Games.
+Part of the [AppDimens family](https://github.com/bodenberg/appdimens) — same token names and the same math as Android, iOS, Flutter, React Native, Web, .NET, GTK, Qt, LVGL, Roku and Games.
 
 🇧🇷 [Resumo em português](#-resumo-em-português)
 
@@ -129,6 +129,31 @@ Details: [docs/CUSTOM.md](docs/CUSTOM.md).
 [Integrations](docs/INTEGRATIONS.md) · [Custom strategies](docs/CUSTOM.md) · [Blender](docs/BLENDER.md) · [Theory (hub)](https://github.com/bodenberg/appdimens/blob/main/DOCS/THEORY.md) · [AI skill](skills/appdimens-py/SKILL.md) · [LLMS.txt](LLMS.txt) · [Changelog](CHANGELOG.md)
 
 ---
+
+<!-- appdimens-family:begin (maintained in bodenberg/appdimens tools/family_block.py) -->
+## 🌍 AppDimens family
+
+Same token names and the same math on every platform — [hub](https://github.com/bodenberg/appdimens) · [AI agent skills](https://github.com/bodenberg/appdimens-skills) · [custom strategies](https://github.com/bodenberg/appdimens/blob/main/DOCS/CUSTOM.md) (one JSON for every platform).
+
+| Platform | Library | Scaled `16` |
+|---|---|---|
+| Android — Jetpack Compose, Views, Java | [appdimens-dynamic](https://github.com/bodenberg/appdimens-dynamic) | `16.sdp` · `16.sdp(context)` |
+| Android — XML resources | [appdimens-sdps](https://github.com/bodenberg/appdimens-sdps) | `@dimen/_16sdp` |
+| Android — XML text sizes | [appdimens-ssps](https://github.com/bodenberg/appdimens-ssps) | `@dimen/_16ssp` |
+| Kotlin / Compose Multiplatform | [appdimens-kmp](https://github.com/bodenberg/appdimens-kmp) | `16.sdp` |
+| iOS · macOS — SwiftUI, UIKit, AppKit, Metal | [appdimens-ios](https://github.com/bodenberg/appdimens-ios) | `16.sdp` |
+| Flutter | [appdimens-flutter](https://github.com/bodenberg/appdimens-flutter) | `16.sdp` |
+| React Native / Expo | [appdimens-react-native](https://github.com/bodenberg/appdimens-react-native) | `sdp(16)` |
+| Web — HTML/CSS, React, Vue, Svelte, Angular | [appdimens-web](https://github.com/bodenberg/appdimens-web) | `sdp(16)` · `16sdp` |
+| .NET — MAUI, WPF, WinForms, WinUI, Android | [appdimens-net-binding](https://github.com/bodenberg/appdimens-net-binding) | `16.Sdp()` · `{sdp:16}` |
+| Qt 5/6 — QML, Widgets | [appdimens-qt](https://github.com/bodenberg/appdimens-qt) | `AppDimens.sdp(16)` · `16_sdp` |
+| GTK 3/4 and portable C99 | [appdimens-gtk](https://github.com/bodenberg/appdimens-gtk) | `16sdp` (CSS) · `ad_sdp(&m, 16)` |
+| LVGL 8/9 — MCUs, embedded Linux | [appdimens-lvgl](https://github.com/bodenberg/appdimens-lvgl) | `lv_ad_sdp(16)` |
+| Roku — BrightScript / SceneGraph | [appdimens-roku](https://github.com/bodenberg/appdimens-roku) | `ad.sdp(16)` |
+| Python — Tkinter, Qt, Kivy, pygame, Blender | **appdimens-py** (this repository) | `ad.sdp(16)` |
+| Games — Unity, Unreal, Godot, C/C++, .NET, Android | [appdimens-games](https://github.com/bodenberg/appdimens-games) | `64f.ASdp()` · `AppDimens.asdp(64)` · `appdimens::asdp(64)` |
+
+<!-- appdimens-family:end -->
 
 ## 🇧🇷 Resumo em português
 
