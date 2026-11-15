@@ -29,6 +29,13 @@ Install the zip from `scripts/build_blender_addon.py`. In add-on code:
 `from appdimens_blender import region_dimens, render_dimens`; `blf_size(0, region_dimens(region).sspPx(13))`;
 render text: `obj.data.size = render_dimens(scene).asdp(0.12)` (use `ftsdp` when the delivery aspect changes).
 
+## Custom strategies
+
+Only when the project declares `customStrategies` (or the user asks for their own rule):
+`from appdimens import custom as c` → `c.load_scaling_strategies(text)` once, then `c.cdp(16, "id")`,
+`c.csp(14, "id")`; one-off math: `c.scaling_formula("base * pow(sw / 360, 0.8)")` or
+`c.custom_scale_strategy(lambda s: s.clamp(s.width / 360, 0.85, 1.8))`. Never invent ids.
+
 ## Don'ts
 - Don't multiply by density twice (Qt/pyglet sizes are already logical; pygame/Pillow are physical).
 - Don't parse strings in tight loops if you can keep the resolver: `f = scope.fn("asdp")` then `f(16)`.

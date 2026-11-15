@@ -94,6 +94,19 @@ text_obj.data.size = render_dimens(scene).asdp(0.12)
 
 Details: [docs/BLENDER.md](docs/BLENDER.md).
 
+## Custom strategies
+
+Your own scaling rule, shared with every AppDimens platform (same JSON document and text formulas):
+
+```python
+from appdimens import custom as c
+hud = c.scaling_formula("base * pow(sw / 360, 0.8)")
+c.load_scaling_strategies(open("custom-strategies.json").read())
+c.cdp(16, hud); c.csp(14, "brand"); c.cdp_px(24, "brand")
+```
+
+Details: [docs/CUSTOM.md](docs/CUSTOM.md).
+
 ## Also included
 
 - `appdimens.units` — `mm`, `cm`, `inch` → dp / px / sp using the snapshot DPI.
@@ -113,7 +126,7 @@ Details: [docs/BLENDER.md](docs/BLENDER.md).
 
 ## Docs
 
-[Integrations](docs/INTEGRATIONS.md) · [Blender](docs/BLENDER.md) · [Theory (hub)](https://github.com/bodenberg/appdimens/blob/main/DOCS/THEORY.md) · [AI skill](skills/appdimens-py/SKILL.md) · [LLMS.txt](LLMS.txt) · [Changelog](CHANGELOG.md)
+[Integrations](docs/INTEGRATIONS.md) · [Custom strategies](docs/CUSTOM.md) · [Blender](docs/BLENDER.md) · [Theory (hub)](https://github.com/bodenberg/appdimens/blob/main/DOCS/THEORY.md) · [AI skill](skills/appdimens-py/SKILL.md) · [LLMS.txt](LLMS.txt) · [Changelog](CHANGELOG.md)
 
 ---
 
