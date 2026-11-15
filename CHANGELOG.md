@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## Latest — in production (`main`)
 
 - `appdimens.custom`: custom scaling strategies, a port of `appdimens-dynamic` library-custom — factor
   lambdas (`custom_scale_strategy`), code/text formulas (`scaling_formula`), full configurations with
