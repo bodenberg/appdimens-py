@@ -1,4 +1,4 @@
-"""Bit-level parity with the web reference implementation (tests/golden.json)."""
+"""Parity with appdimens-dynamic (tests/golden.json generated from its verbatim kernels, float32)."""
 import json
 import math
 import os
@@ -29,9 +29,9 @@ def test_layout_matches():
 def test_factor_tables(case):
     m = _metrics(case)
     for sid, name in enumerate(STRATEGIES):
-        assert list(m.table(sid)) == pytest.approx(case["factors"][name], rel=1e-12, abs=1e-12), name
-    assert compute_factor(0, m, 0, 0, False, True, 0.01) == pytest.approx(case["customK001"]["scaled"], rel=1e-12)
-    assert compute_factor(1, m, 0, 0, False, True, 0.01) == pytest.approx(case["customK001"]["auto"], rel=1e-12)
+        assert list(m.table(sid)) == pytest.approx(case["factors"][name], rel=2e-6, abs=1e-6), name
+    assert compute_factor(0, m, 0, 0, False, True, 0.01) == pytest.approx(case["customK001"]["scaled"], rel=2e-6)
+    assert compute_factor(1, m, 0, 0, False, True, 0.01) == pytest.approx(case["customK001"]["auto"], rel=2e-6)
 
 
 @pytest.mark.parametrize("case", GOLDEN["cases"][:6], ids=lambda c: "%gx%g" % (c["w"], c["h"]))

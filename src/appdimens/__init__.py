@@ -17,7 +17,7 @@ Android, iOS, Flutter, React Native, Web, .NET, GTK, Qt and LVGL.
 from ._core import *  # noqa: F401,F403
 from ._core import __all__ as _core_all
 from ._runtime import Dimens, parse_token, TokenSpec, KIND_DP, KIND_SP, KIND_EM
-from . import units, resize  # noqa: F401
+from . import units, resize, custom  # noqa: F401
 
 __version__ = VERSION  # noqa: F405
 
@@ -92,7 +92,7 @@ def __getattr__(name):  # PEP 562 — any other token, e.g. sdpPh, hdpLwa, sdpPx
 
 
 __all__ = list(_core_all) + [
-    "Dimens", "parse_token", "TokenSpec", "KIND_DP", "KIND_SP", "KIND_EM", "units", "resize",
+    "Dimens", "parse_token", "TokenSpec", "KIND_DP", "KIND_SP", "KIND_EM", "units", "resize", "custom",
     "default_scope", "set_metrics", "update", "metrics", "add_listener", "dimen", "resolve",
     "space_w", "space_h", "space_sw",
 ] + _EXPLICIT

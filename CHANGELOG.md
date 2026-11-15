@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased
+
+- `appdimens.custom`: custom scaling strategies, a port of `appdimens-dynamic` library-custom — factor
+  lambdas (`custom_scale_strategy`), code/text formulas (`scaling_formula`), full configurations with
+  rules per device / size / orientation / multi-window, the shared JSON document (`load_scaling_strategies`,
+  `export_scaling_strategies`), built-ins and presets; `cdp`, `cdp_px`, `csp`, `csp_px`, `csp_units`.
+  Reproduces the cross-platform 540-case fixture.
+
 ## 3.2.0 — first release
 
 - Pure-Python port of AppDimens 3.2: 12 strategies, 11 axis variants (`s`/`h`/`w` + inverters), flags `a`/`i`/`ia`,

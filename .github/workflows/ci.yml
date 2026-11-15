@@ -8,6 +8,10 @@ jobs:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
         python: ["3.8", "3.11", "3.13", "pypy3.10"]
+        exclude:
+          - { os: ubuntu-latest, python: "3.8" }   # not built for Ubuntu 24.04 runners
+        include:
+          - { os: ubuntu-22.04, python: "3.8" }
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
